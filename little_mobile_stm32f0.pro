@@ -1,4 +1,4 @@
-update=10/02/2018 16:27:39
+update=Sat 18 Aug 2018 03:01:28 PM CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,8 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=MCU_ST_STM32
+LibName31=bq24073
+LibName32=bq29732
+LibName33=csd87313dms
+LibName34=tps63051rmw
+LibName35=switches

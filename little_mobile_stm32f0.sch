@@ -29,11 +29,17 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:MCU_ST_STM32
+LIBS:bq24073
+LIBS:bq29732
+LIBS:csd87313dms
+LIBS:tps63051rmw
+LIBS:switches
+LIBS:little_mobile_stm32f0-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -43,15 +49,89 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Sheet
+S 3300 700  1750 1150
+U 5B77116C
+F0 "little_mobile_stm32f0_power" 60
+F1 "little_mobile_stm32f0_power.sch" 60
+F2 "USB_5V" I L 3300 800 60 
+F3 "3v3" I R 5050 800 60 
+F4 "POWER_RAW" I R 5050 950 60 
+F5 "EN2" I R 5050 1300 60 
+F6 "EN1" I R 5050 1450 60 
+F7 "TD" I R 5050 1600 60 
+F8 "CE" I R 5050 1750 60 
+F9 "BAT-" I L 3300 1450 60 
+F10 "BAT+" I L 3300 1350 60 
+F11 "BAT_TERMAL_SENSE" I L 3300 1750 60 
+$EndSheet
+$Sheet
+S 5950 2200 1750 2900
+U 5B7834FE
+F0 "little_mobile_stm32f0_micro" 60
+F1 "little_mobile_stm32f0_micro.sch" 60
+$EndSheet
 $Comp
-L STM32F072RBTx U?
-U 1 1 5A7F1001
-P 5800 3700
-F 0 "U?" H 2900 5725 50  0000 L BNN
-F 1 "STM32F072RBTx" H 8700 5725 50  0000 R BNN
-F 2 "LQFP64" H 8700 5675 50  0001 R TNN
-F 3 "" H 5800 3700 50  0001 C CNN
-	1    5800 3700
+L USB_A J?
+U 1 1 5B78483D
+P 800 1000
+F 0 "J?" H 600 1450 50  0000 L CNN
+F 1 "USB_A" H 600 1350 50  0000 L CNN
+F 2 "" H 950 950 50  0001 C CNN
+F 3 "" H 950 950 50  0001 C CNN
+	1    800  1000
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1100 800  3300 800 
+Wire Wire Line
+	700  1400 700  1550
+Wire Wire Line
+	700  1550 800  1550
+Wire Wire Line
+	800  1550 800  1400
+$Comp
+L GND #PWR?
+U 1 1 5B785365
+P 750 1600
+F 0 "#PWR?" H 750 1350 50  0001 C CNN
+F 1 "GND" H 750 1450 50  0000 C CNN
+F 2 "" H 750 1600 50  0001 C CNN
+F 3 "" H 750 1600 50  0001 C CNN
+	1    750  1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	750  1600 750  1550
+Connection ~ 750  1550
+$Comp
+L Thermistor_NTC TH?
+U 1 1 5B785F64
+P 3000 2200
+F 0 "TH?" V 2825 2200 50  0000 C CNN
+F 1 "Thermistor_NTC" V 3125 2200 50  0000 C CNN
+F 2 "" H 3000 2250 50  0001 C CNN
+F 3 "" H 3000 2250 50  0001 C CNN
+	1    3000 2200
+	1    0    0    -1  
+$EndComp
+Text Notes 3200 2400 0    60   ~ 0
+10k NTC\nsimilar to 103AT-2\nusing NCU18XH103J60RB from Murata\nplaced on the bottom of the PCB against the Battery 
+Wire Wire Line
+	3300 1750 3000 1750
+Wire Wire Line
+	3000 1750 3000 2050
+$Comp
+L GND #PWR?
+U 1 1 5B78645B
+P 3000 2550
+F 0 "#PWR?" H 3000 2300 50  0001 C CNN
+F 1 "GND" H 3000 2400 50  0000 C CNN
+F 2 "" H 3000 2550 50  0001 C CNN
+F 3 "" H 3000 2550 50  0001 C CNN
+	1    3000 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2350 3000 2550
 $EndSCHEMATC
