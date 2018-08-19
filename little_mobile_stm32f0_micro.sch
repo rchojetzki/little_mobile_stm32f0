@@ -309,7 +309,7 @@ U 1 1 5B78A2D0
 P 2250 2950
 F 0 "SW1" H 2250 3100 50  0000 C CNN
 F 1 "SW_DIP_x01" H 2250 2800 50  0000 C CNN
-F 2 "" H 2250 2950 50  0001 C CNN
+F 2 "little_mobile_stm32f0:FSMSM_TE_Switch" H 2250 2950 50  0001 C CNN
 F 3 "" H 2250 2950 50  0001 C CNN
 	1    2250 2950
 	1    0    0    -1  
@@ -364,7 +364,7 @@ Text HLabel 2850 1900 1    60   Input ~ 0
 VDD
 Wire Wire Line
 	2850 1900 2850 2150
-Text Notes 2500 2200 2    60   ~ 0
+Text Notes 2550 2350 2    60   ~ 0
 Reset Button
 Text Notes 6750 1300 2    60   ~ 0
 Power Decoupeling
@@ -407,7 +407,7 @@ U 1 1 5B78B9EF
 P 11000 2500
 F 0 "SW2" H 11000 2650 50  0000 C CNN
 F 1 "SW_DIP_x01" H 11000 2350 50  0000 C CNN
-F 2 "" H 11000 2500 50  0001 C CNN
+F 2 "little_mobile_stm32f0:FSMSM_TE_Switch" H 11000 2500 50  0001 C CNN
 F 3 "" H 11000 2500 50  0001 C CNN
 	1    11000 2500
 	0    1    1    0   
@@ -485,7 +485,7 @@ U 1 1 5B78DFFD
 P 2650 6450
 F 0 "Y2" H 2650 6600 50  0000 C CNN
 F 1 "32.768k" H 2650 6300 50  0000 C CNN
-F 2 "" H 2650 6450 50  0001 C CNN
+F 2 "little_mobile_stm32f0:CM7V-T1A_32.768kHz_Crystal" H 2650 6450 50  0001 C CNN
 F 3 "" H 2650 6450 50  0001 C CNN
 	1    2650 6450
 	1    0    0    -1  
@@ -557,8 +557,8 @@ L Crystal_GND24 Y1
 U 1 1 5B78EA52
 P 900 4800
 F 0 "Y1" H 1025 5000 50  0000 L CNN
-F 1 "Crystal_GND24" H 1025 4925 50  0000 L CNN
-F 2 "" H 900 4800 50  0001 C CNN
+F 1 "8MHz" H 1025 4925 50  0000 L CNN
+F 2 "little_mobile_stm32f0:LFXTAL069277Reel_Crystal_8MHz" H 900 4800 50  0001 C CNN
 F 3 "" H 900 4800 50  0001 C CNN
 	1    900  4800
 	1    0    0    -1  
@@ -630,4 +630,92 @@ Wire Wire Line
 	900  4600 900  4450
 Text Notes 600  4100 0    60   ~ 0
 8MHz Main Frequency Crystal\n449-LFXTAL069277REEL\n20pF Load Capacitance
+Text Notes 2050 2850 2    60   ~ 0
+USING: TE Connectivity: FSMSM
+Text Notes 10900 2250 2    60   ~ 0
+USING: TE Connectivity: FSMSM
+Text HLabel 3250 4450 0    60   Input ~ 0
+PD2
+Text HLabel 3250 4650 0    60   Input ~ 0
+PC0
+Text HLabel 3250 4750 0    60   Input ~ 0
+PC1
+Text HLabel 3250 5250 0    60   Input ~ 0
+PC6
+Text HLabel 3250 4850 0    60   Input ~ 0
+PC2
+Text HLabel 3250 4950 0    60   Input ~ 0
+PC3
+Text HLabel 3250 5050 0    60   Input ~ 0
+PC4
+Text HLabel 3250 5150 0    60   Input ~ 0
+PC5
+Text HLabel 3250 5350 0    60   Input ~ 0
+PC7
+Text HLabel 3250 5450 0    60   Input ~ 0
+PC8
+Text HLabel 3250 5550 0    60   Input ~ 0
+PC9
+Text HLabel 3250 5650 0    60   Input ~ 0
+PC10
+Text HLabel 3250 5750 0    60   Input ~ 0
+PC11
+Text HLabel 3250 5850 0    60   Input ~ 0
+PC12
+Text HLabel 3250 5950 0    60   Input ~ 0
+PC13
+Text HLabel 9250 3050 2    60   Input ~ 0
+PA1
+Text HLabel 9250 3150 2    60   Input ~ 0
+PA2
+Text HLabel 9250 3250 2    60   Input ~ 0
+PA3
+Text HLabel 9250 3350 2    60   Input ~ 0
+PA4
+Text HLabel 9250 3450 2    60   Input ~ 0
+PA5
+Text HLabel 9250 3550 2    60   Input ~ 0
+PA6
+Text HLabel 9250 3650 2    60   Input ~ 0
+PA7
+Text HLabel 9250 3750 2    60   Input ~ 0
+PA8
+Text HLabel 9250 3850 2    60   Input ~ 0
+PA9
+Text HLabel 9250 3950 2    60   Input ~ 0
+PA10
+Text HLabel 9250 4450 2    60   Input ~ 0
+PA15
+Text HLabel 9250 4650 2    60   Input ~ 0
+PB0
+Text HLabel 9250 4750 2    60   Input ~ 0
+PB1
+Text HLabel 9250 4850 2    60   Input ~ 0
+PB2
+Text HLabel 9250 4950 2    60   Input ~ 0
+PB3
+Text HLabel 9250 5050 2    60   Input ~ 0
+PB4
+Text HLabel 9250 5150 2    60   Input ~ 0
+PB5
+Text HLabel 9250 5250 2    60   Input ~ 0
+PB6
+Text HLabel 9250 5350 2    60   Input ~ 0
+PB7
+Text HLabel 9250 5450 2    60   Input ~ 0
+PB8
+Text HLabel 9250 5550 2    60   Input ~ 0
+PB9
+Text HLabel 9250 5650 2    60   Input ~ 0
+PB10
+Text HLabel 9250 5750 2    60   Input ~ 0
+PB11
+Text HLabel 9250 5850 2    60   Input ~ 0
+PB12
+Text HLabel 9250 5950 2    60   Input ~ 0
+PB13
+Text HLabel 9250 6050 2    60   Input ~ 0
+PB14
+Text HLabel 9250 6150 2    60   Input ~ 0
+PB15
 $EndSCHEMATC
