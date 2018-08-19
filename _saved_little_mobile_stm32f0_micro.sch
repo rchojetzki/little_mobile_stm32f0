@@ -309,7 +309,7 @@ U 1 1 5B78A2D0
 P 2250 2950
 F 0 "SW1" H 2250 3100 50  0000 C CNN
 F 1 "SW_DIP_x01" H 2250 2800 50  0000 C CNN
-F 2 "" H 2250 2950 50  0001 C CNN
+F 2 "little_mobile_stm32f0:FSMSM_TE_Switch" H 2250 2950 50  0001 C CNN
 F 3 "" H 2250 2950 50  0001 C CNN
 	1    2250 2950
 	1    0    0    -1  
@@ -364,7 +364,7 @@ Text HLabel 2850 1900 1    60   Input ~ 0
 VDD
 Wire Wire Line
 	2850 1900 2850 2150
-Text Notes 2500 2200 2    60   ~ 0
+Text Notes 2550 2350 2    60   ~ 0
 Reset Button
 Text Notes 6750 1300 2    60   ~ 0
 Power Decoupeling
@@ -407,7 +407,7 @@ U 1 1 5B78B9EF
 P 11000 2500
 F 0 "SW2" H 11000 2650 50  0000 C CNN
 F 1 "SW_DIP_x01" H 11000 2350 50  0000 C CNN
-F 2 "" H 11000 2500 50  0001 C CNN
+F 2 "little_mobile_stm32f0:FSMSM_TE_Switch" H 11000 2500 50  0001 C CNN
 F 3 "" H 11000 2500 50  0001 C CNN
 	1    11000 2500
 	0    1    1    0   
@@ -485,7 +485,7 @@ U 1 1 5B78DFFD
 P 2650 6450
 F 0 "Y2" H 2650 6600 50  0000 C CNN
 F 1 "32.768k" H 2650 6300 50  0000 C CNN
-F 2 "" H 2650 6450 50  0001 C CNN
+F 2 "little_mobile_stm32f0:CM7V-T1A_32.768kHz_Crystal" H 2650 6450 50  0001 C CNN
 F 3 "" H 2650 6450 50  0001 C CNN
 	1    2650 6450
 	1    0    0    -1  
@@ -557,8 +557,8 @@ L Crystal_GND24 Y1
 U 1 1 5B78EA52
 P 900 4800
 F 0 "Y1" H 1025 5000 50  0000 L CNN
-F 1 "Crystal_GND24" H 1025 4925 50  0000 L CNN
-F 2 "" H 900 4800 50  0001 C CNN
+F 1 "8MHz" H 1025 4925 50  0000 L CNN
+F 2 "little_mobile_stm32f0:LFXTAL069277Reel_Crystal_8MHz" H 900 4800 50  0001 C CNN
 F 3 "" H 900 4800 50  0001 C CNN
 	1    900  4800
 	1    0    0    -1  
@@ -630,4 +630,8 @@ Wire Wire Line
 	900  4600 900  4450
 Text Notes 600  4100 0    60   ~ 0
 8MHz Main Frequency Crystal\n449-LFXTAL069277REEL\n20pF Load Capacitance
+Text Notes 2050 2850 2    60   ~ 0
+USING: TE Connectivity: FSMSM
+Text Notes 10900 2250 2    60   ~ 0
+USING: TE Connectivity: FSMSM
 $EndSCHEMATC
